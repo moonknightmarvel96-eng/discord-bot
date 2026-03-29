@@ -52,7 +52,7 @@ client.on('messageCreate', async message => {
 
   try {
     const chat = await groq.chat.completions.create({
-      model: "groq/compound-mini",
+      model: "compound-mini",
       messages: [
         {
           role: "system",
