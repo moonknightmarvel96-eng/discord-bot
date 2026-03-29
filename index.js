@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 const Groq = require('groq-sdk');
 const express = require('express');
@@ -31,7 +30,7 @@ const groq = new Groq({
 // ⏱ Cooldown system
 const cooldown = new Map();
 
-client.on('clientReady', () => {
+client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
 
