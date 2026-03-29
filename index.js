@@ -80,4 +80,6 @@ Rules:
   }
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN)
+  .then(() => console.log("LOGIN SUCCESS 😈"))
+  .catch(err => console.error("LOGIN FAILED 💀", err));
